@@ -7,7 +7,7 @@ import { CustomerComponent } from "./customer/customer.component";
 import { AddcustomerComponent } from "./addcustomer/addcustomer.component";
 import { EditcustomerComponent } from "./editcustomer/editcustomer.component";
 import { AuthGuard } from "./auth.guard";
-import { ChildGuard } from './child.guard';
+import { ChildGuard } from "./child.guard";
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
@@ -18,16 +18,17 @@ const routes: Routes = [
   {
     path: "customer",
     children: [
-      { path: '', component: CustomerComponent, pathMatch: "full" },
+      { path: "", component: CustomerComponent, pathMatch: "full" },
       {
-        path: '', canActivateChild: [ChildGuard],
+        path: "",
+        canActivateChild: [ChildGuard],
         children: [
           { path: "add", component: AddcustomerComponent },
-          { path: "edit", component: EditcustomerComponent }
-        ]
-      }
-    ]
-  }
+          { path: "edit", component: EditcustomerComponent },
+        ],
+      },
+    ],
+  },
 ];
 
 @NgModule({
