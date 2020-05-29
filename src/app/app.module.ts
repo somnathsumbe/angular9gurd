@@ -9,6 +9,8 @@ import { MarchentComponent } from './marchent/marchent.component';
 import { CustomerComponent } from './customer/customer.component';
 import { AddcustomerComponent } from './addcustomer/addcustomer.component';
 import { EditcustomerComponent } from './editcustomer/editcustomer.component';
+import { BookComponent } from './book/book.component';
+import { DetailsComponent } from './book/details/details.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { EditcustomerComponent } from './editcustomer/editcustomer.component';
     MarchentComponent,
     CustomerComponent,
     AddcustomerComponent,
-    EditcustomerComponent
+    EditcustomerComponent,
+    BookComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

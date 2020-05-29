@@ -1,0 +1,11 @@
+<p>book works!</p>
+
+<ul>
+    <li *ngFor="let myAllBook of myAllBooks">
+        {{myAllBook.id}} |     {{myAllBook.name}} 
+    </li>
+</ul>
+
+
+<hr>
+<a class="nav-link" [routerLink]="['details']" routerLinkActive="router-link-active" >Details</a>
