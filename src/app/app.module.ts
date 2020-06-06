@@ -11,6 +11,8 @@ import { AddcustomerComponent } from './addcustomer/addcustomer.component';
 import { EditcustomerComponent } from './editcustomer/editcustomer.component';
 import { BookComponent } from './book/book.component';
 import { DetailsComponent } from './book/details/details.component';
+import { MaincompComponent } from './datapassing/maincomp/maincomp.component';
+import { Compo2Component } from './datapassing/compo2/compo2.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { DetailsComponent } from './book/details/details.component';
     AddcustomerComponent,
     EditcustomerComponent,
     BookComponent,
-    DetailsComponent
+    DetailsComponent,
+    MaincompComponent,
+    Compo2Component
   ],
   imports: [
     BrowserModule,

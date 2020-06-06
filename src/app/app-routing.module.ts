@@ -10,12 +10,16 @@ import { AuthGuard } from "./auth.guard";
 import { ChildGuard } from "./child.guard";
 import { BookComponent } from "./book/book.component";
 import { DetailsComponent } from "./book/details/details.component";
+import { MaincompComponent } from './datapassing/maincomp/maincomp.component';
+import { Compo2Component } from './datapassing/compo2/compo2.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
-  { path: "home", component: HomeComponent },
+  { path: "home", component: HomeComponent},
   { path: "admin", component: AdminComponent, canActivate: [AuthGuard] },
   { path: "marchent", component: MarchentComponent },
+  { path: "datapass1", component: MaincompComponent, data:{id:101 , title:"contact us"} },
+  { path: "datapass2", component: Compo2Component },
 
   {
     path: "customer",
