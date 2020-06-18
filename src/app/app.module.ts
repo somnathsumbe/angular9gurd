@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule }    from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -13,7 +13,9 @@ import { BookComponent } from './book/book.component';
 import { DetailsComponent } from './book/details/details.component';
 import { MaincompComponent } from './datapassing/maincomp/maincomp.component';
 import { Compo2Component } from './datapassing/compo2/compo2.component';
-
+import { ObservablesComponent } from './observables/observables.component';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { Testdata } from './observables/testdata';
 
 @NgModule({
   declarations: [
@@ -27,11 +29,14 @@ import { Compo2Component } from './datapassing/compo2/compo2.component';
     BookComponent,
     DetailsComponent,
     MaincompComponent,
-    Compo2Component
+    Compo2Component,
+    ObservablesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(Testdata)
   ],
   providers: [],
   bootstrap: [AppComponent]

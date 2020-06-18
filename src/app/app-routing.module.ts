@@ -12,6 +12,7 @@ import { BookComponent } from "./book/book.component";
 import { DetailsComponent } from "./book/details/details.component";
 import { MaincompComponent } from './datapassing/maincomp/maincomp.component';
 import { Compo2Component } from './datapassing/compo2/compo2.component';
+import { ObservablesComponent } from './observables/observables.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: "marchent", component: MarchentComponent },
   { path: "datapass1", component: MaincompComponent, data:{id:101 , title:"contact us"} },
   { path: "datapass2", component: Compo2Component },
+  { path: "Observables", component: ObservablesComponent },
 
   {
     path: "customer",

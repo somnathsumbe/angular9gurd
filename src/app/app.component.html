@@ -2,48 +2,40 @@
 
   <!-- Links -->
   <ul class="navbar-nav">
+
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['home']" >home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" [routerLink]="['admin']"  >admin</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" [routerLink]="['marchent']"  >marchent</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" [routerLink]="['customer']"  >customer</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" [routerLink]="['book']"  >book</a>
+  
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle"
+                type="button" id="dropdownMenu1" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <a class="nav-link" [routerLink]="['home']" >home</a>
+          <a class="nav-link" [routerLink]="['admin']"  >admin</a>
+          <a class="nav-link" [routerLink]="['marchent']"  >marchent</a>
+          <a class="nav-link" [routerLink]="['customer']"  >customer</a>
+          <a class="nav-link" [routerLink]="['book']"  >book</a>
+          <a class="nav-link" [routerLink]="['datapass1']" routerLinkActive="router-link-active" >Satic data passing</a>
+          <a class="nav-link" [routerLink]="['datapass2']" routerLinkActive="router-link-active" [state]="{id:501 , cource:'Angular9'}" >Dynamic Data passing</a>
+          <a class="nav-link" [routerLink]="['datapass1']" routerLinkActive="active"  >LinkActive1</a>
+          <a class="nav-link" [routerLink]="['datapass2']" [routerLinkActive]="'active'"  >LinkActive2</a>
+          <a class="nav-link" [routerLink]="['book']" [routerLinkActive]="myClass" >LinkActive3</a>
+          <a class="nav-link" [routerLink]="['marchent']"  [routerLinkActive]="getclass()"  >LinkActive4</a>
+          <a class="nav-link" [routerLink]="['customer']"  [routerLinkActive]="'active home'"  [routerLinkActiveOptions]="{exact:true}" >LinkActive5 two class</a>
+        </div>
+      </div>
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['datapass1']" routerLinkActive="router-link-active" >Satic data passing</a>
+      <a class="nav-link" [routerLink]="['Observables']" >Observables</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" [routerLink]="['datapass2']" routerLinkActive="router-link-active" [state]="{id:501 , cource:'Angular9'}" >Dynamic Data passing</a>
+   
+    <!-- <li class="nav-item">
+      <button type="button" class="btn btn-md btn-info mt-3" (click)="gotodynamic()">Send Dynamic Data</button>
     </li>
-
-
-
-
-    <li class="nav-item">
-      <a class="nav-link" [routerLink]="['datapass1']" routerLinkActive="active"  >LinkActive1</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" [routerLink]="['datapass2']" [routerLinkActive]="'active'"  >LinkActive2</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" [routerLink]="['book']" [routerLinkActive]="myClass" >LinkActive3</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link" [routerLink]="['marchent']"  [routerLinkActive]="getclass()"  >LinkActive4</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" [routerLink]="['customer']"  [routerLinkActive]="'active home'"  [routerLinkActiveOptions]="{exact:true}" >LinkActive5 two class</a>
-    </li>
+    -->
 
   </ul>
 
@@ -51,6 +43,5 @@
 </nav>
 
 
-<button type="button" class="btn btn-md btn-info mt-3" (click)="gotodynamic()">Send Dynamic Data</button>
 
 <router-outlet></router-outlet>
